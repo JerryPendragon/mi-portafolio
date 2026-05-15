@@ -342,7 +342,7 @@ export default function Portfolio() {
             </a>
             <div className="flex gap-4">
               
-              <a href="https://linkedin.com/in/gerardo-preciado-arredondo" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors">
+              <a href="https://www.linkedin.com/in/gerardo-preciado-arredondo-703a39176/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors">
                 <LinkedinIcon className="w-6 h-6" />
               </a>
             </div>
