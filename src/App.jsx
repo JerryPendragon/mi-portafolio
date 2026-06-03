@@ -53,32 +53,32 @@ const PORTFOLIO_DATA = {
     {
       category: "Ingeniería & Bases de Datos",
       icon: <Database className="w-6 h-6 mb-2 text-blue-400" />,
-      items: ["SQL Server & PostgreSQL", "ETL Pipelines", "Modelado Relacional", "Integración de Datos"],
+      items: ["MySQL, SQL Server & PostgreSQL","Python (Pandas, NumPy)", "ETL Pipelines", "Modelado Relacional", "Integración de Datos"],
       color: "bg-blue-900/30 border-blue-800"
     },
     {
       category: "Análisis & Visualización",
       icon: <BarChart className="w-6 h-6 mb-2 text-emerald-400" />,
-      items: ["Power BI", "DAX", "Diseño de Dashboards", "DataCamp Certified"],
+      items: ["Power BI", "DAX", "Diseño de Dashboards", "Excel"],
       color: "bg-emerald-900/30 border-emerald-800"
     },
     {
       category: "Programación & Web",
       icon: <Code className="w-6 h-6 mb-2 text-purple-400" />,
-      items: ["Python (Pandas, NumPy)", "Scikit-Learn", "Angular", "Ionic"],
+      items: ["Scikit-Learn", "Angular & React", "Ionic & Flutter",".NET","Nodejs", "TailwindCSS & MaterialUI"],
       color: "bg-purple-900/30 border-purple-800"
     },
     {
       category: "Infraestructura & Seguridad",
       icon: <Shield className="w-6 h-6 mb-2 text-rose-400" />,
-      items: ["DarkTrace", "SentinelOne", "SCCM", "CISCO Cybersecurity"],
+      items: ["DarkTrace", "SentinelOne", "SCCM", "CISCO Cybersecurity, Xearch, ServicesNow"],
       color: "bg-rose-900/30 border-rose-800"
     }
   ],
   experience: [
     {
       id: 1,
-      role: "Analista de Datos y Ciberseguridad (Practicante)",
+      role: "Residencias Profesionales",
       company: "ArcelorMittal",
       period: "Ene 2026 - Jun 2026",
       description: "Análisis de Seguridad de Datos mediante monitoreo de tráfico de red en tiempo real utilizando DarkTrace y SentinelOne. Gestión de Integridad ejecutando auditorías con SCCM, asegurando la consistencia de las bases de datos corporativas."
@@ -92,18 +92,70 @@ const PORTFOLIO_DATA = {
     },
     {
       id: 3,
-      role: "Becario de Proyectos TI",
+      role: "Proyecto Dual",
       company: "ArcelorMittal",
       period: "Ago 2023 - Jun 2024",
+      description: "Desarrollo de Soluciones web y moviles de servicios IT, Migraciones de codigo, Desarrollo y normalizacion de bases de datos"
+    },
+    {
+      id: 4,
+      role: "Proyecto Dual",
+      company: "ArcelorMittal",
+      period: "Ago 2020 - Jun 2021",
       description: "Soporte a infraestructura mediante mantenimiento preventivo de sistemas y redes. Generación de informes de estatus y reportes técnicos para la gestión de activos tecnológicos de la planta."
     }
+
   ],
   certifications: [
-    { title: "Data Engineer", issuer: "DataCamp", date: "Marzo 2026" },
-    { title: "Data Analyst Associate", issuer: "DataCamp", date: "Marzo 2026" },
-    { title: "Junior Cybersecurity Analyst", issuer: "CISCO", date: "Febrero 2026" },
-    { title: "Intro to Data Science", issuer: "CISCO", date: "Enero 2026" },
-    { title: "Data Protection", issuer: "ArcelorMittal", date: "Marzo 2026" },
+    { 
+      title: "Data Engineer", 
+      issuer: "DataCamp", 
+      date: "Marzo 2026",
+      image: "/dataengineer.png", // Asegúrate de crear esta imagen a partir de tu PDF
+      link: "/certificate_dataengineer.pdf" // El enlace al PDF original que mostraste en tu captura
+    },
+    { 
+      title: "Data Analyst Associate", 
+      issuer: "DataCamp", 
+      date: "Marzo 2026",
+      image: "/dataanalyst.png", // Sugerencia de nombre para la imagen
+      link: "/DataAnalyst.pdf" // Sugerencia de nombre para el PDF
+    },
+    { 
+      title: "Junior Cybersecurity Analyst", 
+      issuer: "CISCO", 
+      date: "Febrero 2026",
+      image: "/cert_cisco_cyber.png",
+      link: "/certificate_cisco_cyber.pdf"
+    },
+    { 
+      title: "Intro to Data Science", 
+      issuer: "CISCO", 
+      date: "Enero 2026",
+      image: "/cert_cisco_data.png",
+      link: "/certificate_cisco_data.pdf"
+    },
+    { 
+      title: "SQL Intermedio", 
+      issuer: "DataCamp", 
+      date: "Marzo 2026",
+      image: "/IntermediateSQL.png",
+      link: "/IntermediateSQL.pdf"
+    },
+    { 
+      title: "Data Protection", 
+      issuer: "ArcelorMittal", 
+      date: "Marzo 2026",
+      image: "/cert_arcelor_protection.png",
+      link: "/certificate_arcelor_protection.pdf"
+    },
+    { 
+      title: "Design DataBase", 
+      issuer: "DataCamp", 
+      date: "Abril 2026",
+      image: "/DesignDataBase.png",
+      link: "/Designdatabase.pdf"
+    },
   ]
 };
 
@@ -271,7 +323,7 @@ export default function Portfolio() {
             <p className="text-slate-400 max-w-2xl mx-auto">Conocimientos técnicos respaldados por certificaciones de la industria e ingeniería formal.</p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {PORTFOLIO_DATA.skills.map((skill, index) => (
               <div key={index} className={`p-6 rounded-2xl border ${skill.color} backdrop-blur-sm hover:-translate-y-1 transition-transform duration-300`}>
                 {skill.icon}
@@ -288,39 +340,79 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Formación y Certificados */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-2xl border border-slate-800 bg-slate-900/30">
-              <div className="flex items-center gap-3 mb-6">
-                <GraduationCap className="w-6 h-6 text-emerald-400" />
-                <h3 className="text-2xl font-bold text-white">Educación</h3>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-white font-medium">Ingeniería en Sistemas Computacionales</h4>
-                  <p className="text-sm text-slate-400">TecNM Campus Lázaro Cárdenas (Ago 2021 - Jun 2026)</p>
+          {/* Formación y Certificados Rediseñado */}
+          <div className="space-y-16">
+            {/* Educación Universitaria */}
+            <div className="p-8 rounded-3xl border border-slate-800 bg-slate-900/40 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-emerald-400"></div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-emerald-500/10 rounded-xl">
+                  <GraduationCap className="w-8 h-8 text-emerald-400" />
                 </div>
-                <div>
-                  <h4 className="text-white font-medium">PTB en Informática</h4>
-                  <p className="text-sm text-slate-400">Conalep 035, Lázaro Cárdenas (Ago 2018 - Jun 2021)</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">Educación Formal</h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="group">
+                  <h4 className="text-xl text-white font-semibold group-hover:text-emerald-400 transition-colors">Ingeniería en Sistemas Computacionales</h4>
+                  <p className="text-slate-400 mt-2 font-medium">TecNM Campus Lázaro Cárdenas</p>
+                  <span className="inline-block mt-2 text-xs font-medium text-emerald-400/80 bg-emerald-400/10 px-3 py-1 rounded-full">Ago 2021 - Jun 2026</span>
+                </div>
+                <div className="group">
+                  <h4 className="text-xl text-white font-semibold group-hover:text-emerald-400 transition-colors">PTB en Informática</h4>
+                  <p className="text-slate-400 mt-2 font-medium">Conalep 035, Lázaro Cárdenas</p>
+                  <span className="inline-block mt-2 text-xs font-medium text-emerald-400/80 bg-emerald-400/10 px-3 py-1 rounded-full">Ago 2018 - Jun 2021</span>
                 </div>
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl border border-slate-800 bg-slate-900/30">
-              <div className="flex items-center gap-3 mb-6">
-                <Award className="w-6 h-6 text-blue-400" />
-                <h3 className="text-2xl font-bold text-white">Certificaciones Top</h3>
+            {/* Galería de Certificaciones */}
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-blue-500/10 rounded-xl">
+                  <Award className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">Certificaciones Destacadas</h3>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              {/* Grid Responsivo para las imágenes */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {PORTFOLIO_DATA.certifications.map((cert, index) => (
-                  <div key={index} className="flex flex-col p-3 rounded-xl border border-slate-700/50 bg-slate-800/20">
-                    <span className="text-sm font-semibold text-white">{cert.title}</span>
-                    <div className="flex items-center justify-between mt-2">
-                      <span className="text-xs text-slate-400">{cert.issuer}</span>
-                      <span className="text-xs text-blue-400/80">{cert.date}</span>
+                  <a 
+                    key={index} 
+                    href={cert.link} // Ahora toda la tarjeta es un enlace hacia el PDF original
+                    target="_blank" // Abre el PDF en una nueva pestaña
+                    rel="noopener noreferrer" // Seguridad al abrir nuevos enlaces
+                    className="group relative rounded-2xl border border-slate-700/50 bg-slate-800/30 overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.15)] flex flex-col h-full cursor-pointer block"
+                  >
+                    
+                    {/* Área de la Imagen del Certificado */}
+                    <div className="w-full h-48 bg-slate-800/80 relative overflow-hidden border-b border-slate-700/50 flex items-center justify-center">
+                      {/* Si la imagen falla o no existe aún, se muestra este ícono por defecto */}
+                      <Award className="w-12 h-12 text-slate-600 absolute opacity-50" />
+                      
+                      {/* Imagen real del certificado */}
+                      <img 
+                        src={cert.image} 
+                        alt={`Certificado ${cert.title}`} 
+                        className="w-full h-full object-cover object-center relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          e.target.style.display = 'none'; // Oculta la imagen rota si el archivo no existe
+                        }}
+                      />
                     </div>
-                  </div>
+
+                    {/* Información de la tarjeta */}
+                    <div className="p-6 flex flex-col flex-grow justify-between">
+                      <div>
+                        <h4 className="text-lg font-bold text-white leading-tight mb-2 group-hover:text-blue-400 transition-colors">{cert.title}</h4>
+                        <p className="text-sm font-medium text-slate-400">{cert.issuer}</p>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-slate-700/50 flex justify-between items-center">
+                        <span className="text-xs font-semibold text-blue-400/80 tracking-wider uppercase">{cert.date}</span>
+                        <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
+                      </div>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -341,8 +433,10 @@ export default function Portfolio() {
               <Mail className="w-5 h-5" /> Gprecciado@gmail.com
             </a>
             <div className="flex gap-4">
-              
-              <a href="https://www.linkedin.com/in/gerardo-preciado-arredondo-703a39176/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors">
+                <GithubIcon className="w-6 h-6" />
+              </a>
+              <a href="https://linkedin.com/in/gerardo-preciado-arredondo" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors">
                 <LinkedinIcon className="w-6 h-6" />
               </a>
             </div>
