@@ -123,15 +123,15 @@ const PORTFOLIO_DATA = {
       title: "Junior Cybersecurity Analyst", 
       issuer: "CISCO", 
       date: "Febrero 2026",
-      image: "/cert_cisco_cyber.png",
-      link: "/certificate_cisco_cyber.pdf"
+      image: "/JuniorCiberSecurity.jpg",
+      link: "/JuniorCybersecurityAnalyst.pdf"
     },
     { 
-      title: "Intro to Data Science", 
+      title: "Linux Essentials", 
       issuer: "CISCO", 
-      date: "Enero 2026",
-      image: "/cert_cisco_data.png",
-      link: "/certificate_cisco_data.pdf"
+      date: "Febrero 2026",
+      image: "/LinuxEssentials.jpg",
+      link: "/LinuxEssentials.pdf"
     },
     { 
       title: "SQL Intermedio", 
@@ -144,8 +144,8 @@ const PORTFOLIO_DATA = {
       title: "Data Protection", 
       issuer: "ArcelorMittal", 
       date: "Marzo 2026",
-      image: "/cert_arcelor_protection.png",
-      link: "/certificate_arcelor_protection.pdf"
+      image: "/dataprotection.jpg",
+      link: "/DataProtection.pdf"
     },
     { 
       title: "Design DataBase", 
