@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Terminal, Database, Shield, BarChart, Mail, ExternalLink, ChevronDown, Code, Download, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 // Cambiamos la ruta para que apunte directamente a la carpeta public y con un nombre sin espacios/acentos
-const cvPDF = "/cv_gerardo.pdf";
+const cvPDF = "/CV-Gerardo Preciado Arredondo_c.pdf";
 
 // Creamos nuestro propio componente SVG para Github ya que Lucide eliminó los logos de marcas
 const GithubIcon = ({ className }) => (
@@ -42,13 +42,11 @@ const LinkedinIcon = ({ className }) => (
 const PORTFOLIO_DATA = {
   hero: {
     name: "Gerardo Preciado",
-    title: "Ingeniero en Sistemas",
-    subtitle: "Especialista en Análisis e Ingeniería de Datos",
-    description: "Transformo información compleja en soluciones estratégicas. Mi experiencia técnica abarca desde la extracción y modelado de datos con Python y SQL, hasta la visualización ejecutiva en Power BI, asegurando siempre la integridad de la información con sólidas bases en ciberseguridad.",
+    title: "Desarrollo, Infraestructura y Analítica para el Entorno Digital",
+    subtitle: "Ingeniero en Sistemas Computacionales | Full-Stack Frontend, Soporte TI & Data",
+    description: "Hola, soy Gerardo Preciado. Como Ingeniero en Sistemas, abordo la tecnología desde una perspectiva integral: resolviendo problemas complejos a nivel de código, hardware e infraestructura de red. Cuento con un trasfondo sólido combinando el desarrollo de aplicaciones web y móviles con herramientas como Angular e Ionic, el monitoreo preventivo de ciberseguridad y la analítica avanzada de datos para optimizar procesos empresariales..",
   },
-  about: {
-    text: "Mi trayectoria profesional se caracteriza por un enfoque integral del dato. Habiendo trabajado en entornos corporativos exigentes como ArcelorMittal, comprendo que el valor de los datos no reside solo en su análisis, sino en su correcta gestión desde el origen. Mi conocimiento en infraestructura y herramientas de seguridad (DarkTrace, SentinelOne) me permite diseñar soluciones analíticas robustas, eficientes y, sobre todo, seguras para la toma de decisiones críticas.",
-  },
+  
   skills: [
     {
       category: "Ingeniería & Bases de Datos",
@@ -423,9 +421,9 @@ export default function Portfolio() {
       {/* Contact Section & Footer */}
       <section id="contact" className="pt-24 pb-12 bg-slate-900/50 border-t border-slate-800/50 relative z-10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">¿Listo para potenciar tus datos?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">¿Esto te esta convenciendo?</h2>
           <p className="text-lg text-slate-400 mb-10">
-            Estoy abierto a nuevas oportunidades corporativas o proyectos donde la integridad y el análisis del dato sean críticos.
+            Estoy abierto a nuevas oportunidades corporativas o proyectos donde el dessarrollo, soluciones tecnologicas, la integridad y el análisis del dato sean críticos.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
